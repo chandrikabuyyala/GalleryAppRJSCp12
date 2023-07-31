@@ -3,7 +3,7 @@ import './index.css'
 
 const ThumbnailItem = props => {
   const {imageDetails, isActive, setActiveThumbnailId} = props
-  const {ThumbnailUrl, ThumbnailAltText, id} = imageDetails
+  const {thumbnailUrl, thumbnailAltText, id} = imageDetails
   const thumbnailClassName = isActive ? 'thumbnail active' : 'thumbnail'
 
   const onClickThumbnail = () => {
@@ -18,8 +18,8 @@ const ThumbnailItem = props => {
         onClick={onClickThumbnail}
       >
         <img
-          src={ThumbnailUrl}
-          alt={ThumbnailAltText}
+          src={thumbnailUrl}
+          alt={thumbnailAltText}
           className={thumbnailClassName}
         />
       </button>
